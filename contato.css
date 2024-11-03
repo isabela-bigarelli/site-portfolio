@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header>div{
+    margin-left: 100px;
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    padding-top: 10px;
+}
+
+header a:hover{
+    color: #5763e8;
+}
+
+header a{
+    text-decoration: none;
+    font-family: 'Genos';
+    margin-left: 100px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+#titulo{
+    font-family: 'Genos';
+    font-size: 32px;
+    display: flex;
+    gap: 10px;
+    font-weight: 800;
+}
+
+
+#titulo p{
+    color: #5763e8;
+}
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 0.5fr 1.7fr 0.5fr 1.7fr 0.5fr 1.7fr 0.5fr;
+    grid-template-rows: 300px 500px;
+    background-image: linear-gradient(90deg,
+    #2f0078 0%,
+    #5b3e86 50%,
+    #935be6 100%);
+}
+
+
+#email{
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+#github{
+    grid-column: 4/5;
+    grid-row: 1;
+}
+
+#linkedin{
+    grid-column: 6/7;
+    grid-row: 1;
+}
+
+#formulario{
+    grid-column: 2/7;
+    grid-row: 2;
+}
+
+.svgs{
+    height: 70px;
+    width: 70px;
+    margin: 70px 125px 0 125px;
+}
+
+.texto-ctt{
+    font-family: 'Lexend Exa';
+    color: #ffffff;
+    text-align: center;
+}
+
+#email p:last-child{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+#email p:nth-child(2){
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+#github p:last-child{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+#github p:nth-child(2){
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+#linkedin p:last-child{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+#linkedin p:nth-child(2){
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+#formulario h1{
+    font-family: 'Lexend Exa';
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+}
+
+#formulario input::placeholder{
+    font-family: 'Lexend Exa';
+
+}
+
+#nome-email{
+    display: flex;
+    gap: 30px;
+    border: none;
+    position: relative;
+}
+
+#nome-email div{
+    width: 100%;
+    border: none;
+}
+
+#nome-email input{
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+}
+
+#nome-email input::placeholder{
+    position: absolute;
+    left: 10px;
+}
+
+#assunto {
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#assunto input{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+#assunto input::placeholder{
+    position: absolute;
+    left: 10px;
+}
+
+#mensagem{
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#mensagem textarea{
+    width: 100%;
+    height: 150px;
+}
+
+#mensagem textarea::placeholder{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: 'Lexend Exa';
+}
+
+#submit input{
+    margin-left: 450px;
+    padding: 9px 30px 9px 30px;
+    background-color: #5763e8;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: 'Lexend Exa';
+}
+
+#submit{
+    border: none;
+}
+
+
+footer>div{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1.5fr 1fr 0.7fr;
+    grid-template-rows: 30px 100px 50px;
+    font-family: 'Lexend Exa';
+}
+
+
+/*footer>div{
+    margin: 50px 0 0 150px;
+}*/
+
+#email-footer{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#email-footer ul{
+    list-style: none;
+}
+
+#email-footer p{
+    margin-top: 20px;
+}
+
+#feito{
+    grid-column: 3;
+    grid-row: 3;
+    font-weight: 200;
+}
+
+#curriculo a{
+    color: #370029;
+}
+
+
+#redes-sociais{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+#redes-sociais>li>img{
+    height: 35px;
+    width: 35px;
+}
+
+#redes-sociais{
+    grid-column: 4;
+    grid-row: 2;
+}
+
+
+body.dark #toggle-theme {
+    background-color: #07113a; 
+}
+
+#toggle-theme {
+    background-color: #ffffff;
+     border: none;
+     border-radius: 5px;
+     padding: 10px;
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s;
+ }
+
+ body.dark #toggle-theme {
+    background-color: #07113a; /* Cor do fundo para o tema escuro */
+    color: #E0E0E0;
+}
+
+ body.dark {
+     background-color: #07113a;
+     color: #E0E0E0;
+ }
+ 
+ body.dark main {
+     background-image: none;
+     background-color: #07113a;
+     color: #E0E0E0;
+ }
+ 
+ 
+ body.dark #curriculo a {
+     color: #ff95fc;
+ }
+ 
+ #toggle-theme img {
+     height: 20px;
+     width: 30px;
+ }
+ 
+ body.dark footer {
+     background-color: #000000; 
+ }
+ 
+ #redes-sociais img {
+     transition: filter 0.3s; 
+ }
+ 
+ body.dark #redes-sociais img {
+     filter: brightness(0) invert(1); 
+ }
+
+ body.dark header {
+    background-color: #ffffff; 
+    color: #000; 
+}
+
+body.dark header a {
+    color: #000; 
+}
+
+body.dark header #titulo{
+    font-family: 'Genos';
+    font-size: 32px;
+    display: flex;
+    gap: 10px;
+    font-weight: 800;
+}
+
+body.dark #titulo p{
+    color: #5763e8;
+}
+
+body.dark #titulo h1{
+    color: #000000;
+}
+
+@media (max-width: 480px) {
+        header {
+            align-items: center;
+        }
+    
+        header ul {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        header a {
+            margin-left: 0;
+            margin-top: 10px;
+            font-size: 14px; 
+        }
+    
+        main {
+            grid-template-columns: 1fr; 
+        }
+    
+        main div {
+            padding: 10px; 
+        }
+    
+        #titulo {
+            font-size: 20px; 
+        }
+    
+        .svgs {
+            height: 40px;
+            width: 40px;
+        }
+    
+        #submit input {
+            width: 100%; 
+            margin-top: 20px;
+        }
+    }
+
+

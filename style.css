@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-image: linear-gradient(90deg,
+    #2f0078 0%,
+    #5b3e86 50%,
+    #935be6 100%);
+    display: flex;
+
+}
+
+#titulo{
+    font-size: 50px;
+    font-family: 'Asset';
+    color: #ffff;
+    padding-left: 100px;
+    line-height: 70px;
+}
+
+#paginas{
+    list-style: none;
+    padding-left: 210px;
+}
+
+#paginas li{
+    font-family: 'Lexend Exa';
+    font-size: 28px;
+    line-height: 50px;
+}
+
+#paginas a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+#paginas a:hover{
+    color: #ff95fc;
+}
+
+main>div{
+    margin: 150px;
+    display: flex;
+}
+
+footer>div{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1.5fr 1fr 0.7fr;
+    grid-template-rows: 30px 100px 50px;
+    font-family: 'Lexend Exa';
+}
+
+/*footer>div{
+    margin: 50px 0 0 150px;
+}*/
+
+#email{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#email ul{
+    list-style: none;
+}
+
+#email p{
+    margin-top: 20px;
+}
+
+#feito{
+    grid-column: 3;
+    grid-row: 3;
+    font-weight: 200;
+}
+
+#curriculo a{
+    color: #370029;
+}
+
+
+#redes-sociais{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+#redes-sociais>li>img{
+    height: 35px;
+    width: 35px;
+}
+
+#redes-sociais{
+    grid-column: 4;
+    grid-row: 2;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); 
+        opacity: 0; 
+    }
+    to {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+#titulo, #paginas {
+    opacity: 0; 
+    animation: slideIn 1s ease forwards; 
+}
+
+#titulo {
+    animation-delay: 0s; 
+}
+
+#paginas {
+    animation-delay: 0.5s; 
+}
+
+
+#toggle-theme {
+   background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark #toggle-theme {
+    background-color: #07113a; /* Cor do fundo para o tema escuro */
+    color: #E0E0E0;
+}
+
+body.dark {
+    background-color: #07113a;
+    color: #E0E0E0;
+}
+
+body.dark main {
+    background-image: none;
+    background-color: #07113a;
+}
+
+body.dark #titulo {
+    color: #E0E0E0;
+}
+
+body.dark #paginas a {
+    color: #E0E0E0;
+}
+
+body.dark #paginas a:hover {
+    color: #ff95fc;
+}
+
+body.dark #curriculo a {
+    color: #ff95fc;
+}
+
+#toggle-theme img {
+    height: 30px;
+    width: 40px;
+}
+
+body.dark footer {
+    background-color: #000000; /* Azul para o tema escuro */
+}
+
+#redes-sociais img {
+    transition: filter 0.3s; /* Transição suave para a mudança de cor */
+}
+
+body.dark #redes-sociais img {
+    filter: brightness(0) invert(1); /* Muda os ícones para branco no tema escuro */
+}
+
+@media (max-width: 480px) {
+
+    html, body {
+        height: 100%; /* Garante que o body ocupe a altura total */
+        margin: 0; /* Remove margens padrão */
+        display: flex; /* Usa flexbox no body */
+        flex-direction: column; /* Alinha itens em coluna */
+    }
+
+    main {
+        background-image: linear-gradient(90deg, #2f0078 0%, #5b3e86 50%, #935be6 100%);
+        display: flex;
+        flex-direction: column; /* Alinha itens em coluna */
+        flex: 1; /* Permite que o main cresça para ocupar o espaço disponível */
+        overflow: auto; /* Permite rolagem se o conteúdo for maior */
+        padding: 20px; /* Adiciona espaçamento interno */
+        margin-bottom: 20px; 
+    }
+
+    footer {
+        background-color: #000; /* Cor de fundo do footer */
+        color: #fff; /* Cor do texto no footer */
+        padding: 20px; /* Espaçamento interno */
+        width: 100%;
+    }
+    #titulo {
+        font-size: 30px; /* Tamanho menor para o título */
+        padding-left: 5px; /* Menos espaço à esquerda */
+        line-height: 40px; /* Ajustar a linha */
+        margin: 0;
+    }
+
+    #redes-sociais li>img{
+        height: 20px;
+        width: 20px;
+    }
+
+    svg {
+        width: 20px; /* Tamanho menor do SVG em telas pequenas */
+        height: 20px; /* Tamanho menor do SVG em telas pequenas */
+        position: absolute;
+        top: 80px;
+        left: 10px;
+    }
+
+    #paginas {
+        display: none; /* Oculta a lista inicialmente */
+        padding-left: 0; /* Remove o padding à esquerda */
+        margin: 20px 0; /* Margem superior/inferior */
+    }
+
+    #paginas.show {
+        display: block; /* Exibe a lista ao ser clicado */
+    }
+
+    #paginas a{
+        font-size: 15px;
+    }
+
+    main > div {
+        flex-direction: column; /* Alinha itens em coluna */
+        margin: 50px; /* Menos margem */
+        width: 100%;
+    }
+
+    footer > div {
+        grid-template-columns: 1fr 3fr 1fr; /* 3 colunas para telas menores */
+        grid-template-rows: repeat(3, auto); /* Cada elemento em uma linha */
+    }
+
+    #email {
+        grid-column: 2; 
+        grid-row: 1;/* Coloca o conteúdo na segunda coluna */
+        text-align: left;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+    #feito {
+        grid-column: 2;
+        grid-row:2; /* Coloca o conteúdo na segunda coluna */
+        text-align: left;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+    #redes-sociais {
+        grid-column: 2;
+        grid-row: 3; /* Coloca os ícones na segunda coluna */
+        text-align: left;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+    #curriculo{
+        font-size: 10px;
+    }
+
+    #toggle-theme {
+        margin-bottom: 20px; /* Margem inferior para o botão */
+    }
+}
+
+/* Exibir o SVG em telas menores */
+@media (max-width: 480px) {
+    svg {
+        display: inline-block; /* SVG ao lado do título */
+        cursor: pointer; /* Aponta para clique */
+    }
+}
